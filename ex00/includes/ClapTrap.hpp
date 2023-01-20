@@ -6,14 +6,12 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 18:05:06 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/01/18 22:22:04 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/01/20 15:20:27 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
-
-# include <string>
+#pragma once
+#include <string>
 
 class ClapTrap
 {
@@ -25,6 +23,7 @@ private:
 
 public:
 	ClapTrap();
+	ClapTrap(std::string name);
 	ClapTrap(
 		std::string name,
 		int hitPoints,
@@ -33,11 +32,14 @@ public:
 	ClapTrap(ClapTrap const & src);
 	~ClapTrap();
 
+	std::string getName() const;
+	int getHitPoints() const;
+	int getEnergyPoints() const;
+	int getAttackDamage() const;
+
 	void attack(const std::string & target);
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
 	ClapTrap &operator=(ClapTrap const &rhs);
 };
-
-#endif

@@ -6,14 +6,14 @@
 #    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2023/01/18 18:04:11 by ple-stra         ###   ########.fr        #
+#    Updated: 2023/01/20 15:18:38 by ple-stra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= clapTrap
 
 SRCS_DIR	= srcs
-SRCS		= main.cpp Fixed.cpp Point.cpp bsp.cpp
+SRCS		= main.cpp ClapTrap.cpp
 BUILD_DIR	= build
 OBJ_DIR		= $(BUILD_DIR)/objs
 OBJ			= $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
