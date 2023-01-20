@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 22:22:33 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/01/20 15:36:40 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/01/20 16:06:44 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ ClapTrap::ClapTrap(
 
 ClapTrap::ClapTrap(ClapTrap const & src)
 {
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	*this = src;
 }
 

@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:18:08 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/01/20 15:36:45 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/01/20 16:07:10 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int main()
 	ClapTrap riri("Riri", 10, 5, 12);
 	ClapTrap fifi("Fifi");
 	ClapTrap loulou("Loulou");
+	ClapTrap copy(loulou);
 
 	riri.attack(fifi.getName());
 	fifi.takeDamage(riri.getAttackDamage());
