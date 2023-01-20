@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:54:23 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/01/20 19:28:49 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/01/20 19:44:33 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,31 +15,27 @@
 
 DiamondTrap::DiamondTrap()
 	: ClapTrap("unamed_clap_name"),
-	FragTrap("unamed_clap_name"),
-	ScavTrap("unamed_clap_name")
+	ScavTrap("unamed_clap_name"),
+	FragTrap("unamed_clap_name")
 {
 	std::cout << "DiamondTrap Constructor called" << std::endl;
 	this->_name = "unamed";
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackDamage = FragTrap::_attackDamage;
+	this->_energyPoints = 50;
 }
 
 DiamondTrap::DiamondTrap(std::string name)
 	: ClapTrap(name + "_clap_name"),
-	FragTrap(name + "_clap_name"),
 	ScavTrap(name + "_clap_name"),
+	FragTrap(name + "_clap_name"),
 	_name(name)
 {
 	std::cout << "DiamondTrap Constructor by name called" << std::endl;
-	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
-	this->_attackDamage = FragTrap::_attackDamage;
+	this->_energyPoints = 50;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const & src)
-	: FragTrap(src),
-	ScavTrap(src),
+	: ScavTrap(src),
+	FragTrap(src),
 	_name(src.getName())
 {
 	std::cout << "DiamondTrap copy constructor called" << std::endl;
