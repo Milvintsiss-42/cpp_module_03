@@ -6,10 +6,11 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:18:08 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/01/20 16:36:35 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/01/20 18:09:43 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "ScavTrap.hpp"
 
 int main()
@@ -33,6 +34,7 @@ int main()
 		loulou.takeDamage(riri.getAttackDamage());
 		riri.attack(loulou.getName());
 	}
+	std::cout << std::endl << std::endl;
 	{
 		ScavTrap riri("Riri");
 		ScavTrap fifi("Fifi");

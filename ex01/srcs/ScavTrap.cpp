@@ -6,48 +6,32 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:42:55 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/01/20 16:36:01 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/01/20 18:08:05 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
 	std::cout << "ScavTrap Constructor called" << std::endl;
-	this->_name = "unamed";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	std::cout << "ScavTrap Constructor by name called" << std::endl;
-	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(
-	std::string name,
-	int hitPoints,
-	int energyPoints,
-	int attackDamage)
-{
-	std::cout << "ScavTrap Custom constructor called" << std::endl;
-	this->_name = name;
-	this->_hitPoints = hitPoints;
-	this->_energyPoints = energyPoints;
-	this->_attackDamage = attackDamage;
-}
-
-ScavTrap::ScavTrap(ScavTrap const & src)
+ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src)
 {
 	std::cout << "ScavTrap copy constructor called" << std::endl;
-	*this = src;
 }
 
 ScavTrap::~ScavTrap()
