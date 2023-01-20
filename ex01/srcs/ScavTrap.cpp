@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 15:42:55 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/01/20 18:08:05 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/01/20 19:32:32 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ void ScavTrap::guardGate() const
 			"to Gate keeper mode." << std::endl;
 		return ;
 	}
-	std::cout << "ScavTrap " << this->_name << "is now in Gate keeper mode."
+	std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode."
 		<< std::endl;
 }

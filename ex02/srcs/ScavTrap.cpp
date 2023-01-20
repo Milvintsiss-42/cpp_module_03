@@ -67,6 +67,6 @@ void ScavTrap::guardGate() const
 			"to Gate keeper mode." << std::endl;
 		return ;
 	}
-	std::cout << "ScavTrap " << this->_name << "is now in Gate keeper mode."
+	std::cout << "ScavTrap " << this->_name << " is now in Gate keeper mode."
 		<< std::endl;
 }
